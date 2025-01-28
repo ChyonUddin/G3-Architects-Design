@@ -21,6 +21,10 @@
     font-size: 1rem;
     line-height: 1.625rem;
 }
+.section-title {
+    font-size: 2.75rem;
+    color: #131313;
+}
 
 /*header related style*/
 
@@ -36,10 +40,7 @@ nav {
     margin-bottom: 50px;
     align-items: center;
 }
-.nav-title{
-    font-size: 2.75rem;
-    color: #131313;
-}
+
 nav > ul {
     display: flex;  
 }
@@ -51,8 +52,7 @@ nav li {
 }
 nav li a{
     text-decoration: none;
-    color: #424242 ;
-    
+    color: #424242 ;  
 }
 /* banner styles */
 .banner-conter{
@@ -72,15 +72,18 @@ header img{
     width: 100%;
     margin-top: 20px;
 }
-/* Quick list */
+/* Quick list start */
 main{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 4rem;
 }
 .quick-list{
     display: flex;
+    flex-direction: r;
     margin-top: 40px ;
     align-items: center;
+    justify-content: center;
     padding: 0 70;
 }
 .list-img-grid, .teams-img-container {
@@ -112,20 +115,123 @@ main{
     color: #FF900E;
     font-weight: 700;
 }
+/* Feature section start */
+.features-container{
+    display: flex;
+    margin-top: 50px;
+    gap: 1.5rem;
+}
+.features-content .section-title{
+    padding-left: 20px;
+    border-left: 3px solid #FF900E;
+}
+.features-content .text-light-gray{
+    margin: 1.5rem 0rem;
+}
+.features-content .card{
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.features-content .card .card-title{
+    font-size: 1.22rem;
+    color: #131313;
+    font-weight: 500;
+}
+.features-content .card .card-description{
+    color: #727272;
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+.experiens{
+    padding: 25px;
+    background-color: #FF900E;
+    width: 327px;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 100px;
+}
+.features-img img{
+    margin-left: 1.8rem;
+    height: 90%;
+}
+.experiens h4{
+    font-size: 4rem;
+}
+.experiens p{
+    font-size: 1.75rem;
+}
+/* some facts style start here  */
+.some-facts-container{
+    margin-top: 20px;
+}
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 1.4rem 0;
+}
+.card-container .card{
+    box-sizing: border-box;
+    padding: 1.6rem;
+    border: 2px solid blueviolet;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.card .stats{
+    font-size: 1.7rem;
+    color: #424242;
+}
+.card .card-title{
+    font-size: 1.25rem;
+}
+/* Sponsors section start */
+.sponsors-logo-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
 
+}
+
+/* footer section start */
+footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    
+}
+.footer .text-light-gray{
+    padding: 20px 80px;
+    background-color:#FFF4E7 ;
+    margin: 100px 0px;
+    text-align: center;
+}
 /* for mobile devices */
 /* Header section */
 @media screen and (max-width:745px){
     header{
         padding: 20px;
     }
-    nav, .quick-list{
+    nav, .quick-list, .card-container, .sponsors-logo-container, .features-container{
         flex-direction: column;
+        gap:10px;
+        
     }
     .teams-img-container{
         grid-template-columns: 1fr ;
     }
-   
+    .some-facts-container{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .features-img img {
+        width: 100%;
+    }
+    .experiens{
+        max-width: 200px;
+    }
 }
 
 /* Responsive for quick list */
@@ -135,7 +241,7 @@ main{
     header{
         padding: 50px;
     }
-    nav{
+    nav, .sponsors-logo-container{
         flex-direction: column;
     }
     .list-coulum2{
@@ -148,5 +254,7 @@ main{
     .teams-img-container{
         grid-template-columns: 1fr ;
     }
-   
+    .card-container {
+        gap: 10px;
+    }
 }
